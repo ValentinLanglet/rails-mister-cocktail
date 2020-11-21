@@ -1,8 +1,7 @@
-.card-category {
+.grid-cocktails {
   background-size: cover;
   background-position: center;
-  height: 180px;
-  width: 300px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 24px;
@@ -19,4 +18,9 @@ a {
   padding-top: 60px;
   align-items: center;
   align-content: center;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
 }
