@@ -1,6 +1,10 @@
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1516458464372-eea4ab222b31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);">
+  <div class="d-flex justify-content-center">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+        <%= f.submit :pasbonpourlasante %>
+      <% end %>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
-    <%= f.submit :button %>
-  <% end %>
+  </div>
+</div>

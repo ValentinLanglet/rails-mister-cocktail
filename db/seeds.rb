@@ -9,3 +9,7 @@
 Cocktail.create(name: "Mister Mojito")
 Cocktail.create(name: "Vodka ")
 Cocktail.create(name: "Rhum")
+
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "citron")
+Ingredient.create(name: "mangue")

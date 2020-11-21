@@ -1,21 +1,28 @@
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1539639885136-56332d18071d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);">
+<div class="d-flex container">
+  <div class="card-category pt-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1500217052183-bc01eee1a74e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8ZHJpbmt8ZW58MHx8MHw%3D&auto=format&fit=crop&w=800&q=60)">
+      <div class="container">
+        <%= @cocktail.name %>
+          <div class="card-description">
 
+          </div>
+      </div>
+  </div>
+</div>
 <div class="container">
-  <%= @cocktail.name %>
+
+  <div class="card-description">
+    <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    <%= link_to 'All cocktails', cocktails_path, class: "btn btn-primary" %>
+      <div class="delete">
+      <% @cocktail.doses.each do |dose| %>
+      <%= dose.description %>
+      <%= link_to 'Delete', dose_path(dose), method: :delete, class: "btn btn-danger"  %>
+      <% end %>
+      </div>
+  </div>
 
 </div>
-
-<div class="container">
-  <%= link_to 'add a dose', new_cocktail_dose_path(@cocktail) %>
-</div>
-<div class="container">
-  <%= link_to 'All cocktails', cocktails_path %>
-  <% @cocktail.doses.each do |dose| %>
-  <%= dose.description %>
-
-<%= link_to 'Delete', dose_path(dose), method: :delete  %>
-
-  <% end %>
 </div>
 
-<% console %>
 
